@@ -7,7 +7,7 @@
     "start": "nodemon ./index.js"
   },
   "keywords": [
-    "noravel"
+    "noravel-app"
   ],
   "author": "Nam Trinh Tran Phuong",
   "license": "ISC",
