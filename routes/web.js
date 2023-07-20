@@ -1,7 +1,10 @@
-const express = require('express');
-const router = express.Router();
+const noravel = require('noravel');
+const router = noravel.router();
 const WelcomeController = require('../app/Http/Controllers/WelcomeController');
 
-router.get('/', (req, res) => new WelcomeController(req, res).index());
+router.get('/', [WelcomeController, 'index']);
+router.get('/test', (req, res) => {
+  res.send('This is test.');
+});
 
-module.exports = router;
+module.exports = router.run();

@@ -1,3 +1,5 @@
+'use strict';
+
 function RouteServiceProvider(app) {
   return {
     registered: [],
@@ -5,13 +7,12 @@ function RouteServiceProvider(app) {
     load() {
       for (const routeFile of this.registered) {
         const router = require('../../' + routeFile.route_path);
-        app.use(routeFile.prefix, router);
+        app.use(routeFile?.prefix ?? '', router);
       }
     },
   
     register() {
       this.registered.push({
-        prefix: '/',
         route_path: 'routes/web',
       });
     },

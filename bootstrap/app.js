@@ -6,11 +6,13 @@ const Bootstrap = base_dir => {
   const app = express();
   require('dotenv').config();
   const path = require('path');
+  const expressLayouts = require('express-ejs-layouts');
 
   // Register static files
   app.use(express.static('public'));
 
   // Register view engine
+  app.use(expressLayouts);
   app.set('views', `${base_dir}/resources/views`);
   app.set('view engine', 'ejs');
 

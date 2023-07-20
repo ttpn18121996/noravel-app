@@ -1,3 +1,5 @@
+'use strict';
+
 function AppServiceProvider(app) {
   return {
     register() {
