@@ -1,15 +1,15 @@
 'use strict';
 
-function AppServiceProvider(app) {
-  return {
-    register() {
-      //
-    },
+const { ServiceProvider } = require('noravel');
 
-    boot() {
-      //
-    },
-  };
+class AppServiceProvider extends ServiceProvider {
+  register() {
+    //
+  }
+
+  boot() {
+    //
+  }
 }
 
 module.exports = AppServiceProvider;

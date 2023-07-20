@@ -14,6 +14,7 @@ const Bootstrap = base_dir => {
   // Register view engine
   app.use(expressLayouts);
   app.set('views', `${base_dir}/resources/views`);
+  app.set('layout', 'layouts/app');
   app.set('view engine', 'ejs');
 
   Application(app, base_dir).run();
