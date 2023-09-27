@@ -10,10 +10,6 @@ class WelcomeController extends Controller {
       });
     });
   }
-
-  test() {
-    this.view('welcome');
-  }
 }
 
 module.exports = WelcomeController;
