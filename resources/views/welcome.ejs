@@ -1,2 +1,21 @@
 <h1>Welcome to noravel</h1>
 <p>This is a web application framework based on <a href="https://laravel.com" target="_blank">laravel</a></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (const user of users) { %>
+            <tr>
+                <td><%- user.id %></td>
+                <td><%- user.name %></td>
+                <td><%- user.email%></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
