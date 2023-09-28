@@ -6,7 +6,7 @@ class WelcomeController extends Controller {
     const connection = app.resolve('mysqlConnection');
     connection.getConnection().query(`SELECT * FROM users`, (err, results) => {
       this.view('welcome', {
-        users: results,
+        users: results ?? [],
       });
     });
   }

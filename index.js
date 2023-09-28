@@ -1,4 +1,3 @@
-const path = require('path');
 const { default: { app } } = require('./bootstrap/app');
 
 const APP_NAME = process.env.APP_NAME || 'Noravel';

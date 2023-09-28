@@ -3,6 +3,7 @@ const databaseConfig = {
 
   connections: {
     mysql: {
+      driver: 'mysql',
       host: process.env.DB_HOST || 'localhost',
       port: process.env.DB_PORT || 3306,
       user: process.env.DB_USERNAME || 'root',
@@ -11,6 +12,7 @@ const databaseConfig = {
     },
 
     postgres: {
+      driver: 'postgres',
       host: process.env.DB_HOST || 'localhost',
       port: process.env.DB_PORT || 5432,
       user: process.env.DB_USERNAME || 'root',

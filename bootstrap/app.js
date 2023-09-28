@@ -8,6 +8,10 @@ const Bootstrap = base_dir => {
   const path = require('path');
   const expressLayouts = require('express-ejs-layouts');
 
+  // Register middleware
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
+
   // Register static files
   app.use(express.static('public'));
 
@@ -28,7 +32,7 @@ const kernel = Bootstrap(path.join(__dirname + '/..'));
 exports.default = kernel;
 exports.resolve = (abstract = null) => {
   if (!abstract) {
-    return kernel.container
+    return kernel.container;
   }
 
   return kernel.container.resolve(abstract);
